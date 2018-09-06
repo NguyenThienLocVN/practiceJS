@@ -1,40 +1,18 @@
+var $ = function( selector ) {
+    return new select( selector );
+};
 
-    // var element = document.getElementById('id');
-    // element.onclick = function() {
-        
-    // }
+select = function( selector ){
+    this.element = document.querySelector(selector);
 
+    this.hide = function () {
+        // console.log(this.element);
+        this.element.style.display = 'none';
+    }
 
-
-    var $ = function (selector) {
-        this.selector = document.querySelector(selector);
-
-        this.hide = function(){
-            alert('hide');
-        }
-
-        this.show = function(){
-            alert('show');
-        }
-    };
-    
-    var $ = new $("li");
-
-    document.getElementById("btn-hide").onclick = $.hide();
+    this.show = function () {
+        this.element.style.display = 'block';
+    }
+};
 
 
-    
-
-
-
-
-
-
-
-    //var buttonHide =  document.getElementById("btn-hide");
-
-
-
-
-
-    
